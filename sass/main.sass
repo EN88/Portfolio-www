@@ -1,0 +1,739 @@
+//Colors
+$dark-color: #303030
+$emerald: #17b1a5
+$midnight-blue: #2c3e50
+$mobile-background: #8BC34A
+//
+// Base Styles
+//
+html
+    -webkit-font-smoothing: antialiased
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15)
+    ::-webkit-scrollbar
+        display: none
+body
+    font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif
+h1
+    color: $dark-color
+    weight: 500
+    opacity: 0.8
+    font-size: 52px   
+.span-color-green
+    color: #61BD6D
+.span-color-blue
+    color: #3D8EB9
+ul
+    list-style: none
+.kill-object
+    opacity: 0!important
+    transition: opacity 0.2s ease-out
+.hidden-part
+    visibility: hidden
+.hide-text
+    text-indent: 100%
+    white-space: nowrap
+    overflow: hidden    
+figure
+    margin: 0 auto    
+.hr-line 
+    border: 0
+    height: 2px
+    background-image: linear-gradient(to right, rgba(52, 73, 94, 0), rgba(52, 73, 94, 0.75), rgba(0, 0, 0, 0))
+    opacity: 0.9
+    margin-bottom: 60px
+@media screen and (max-width: 400px)
+    .not-mobile
+        display: none
+
+//
+//Rocket to top
+//
+.rocket
+    position: fixed
+    top: 60%
+    right: 15px
+    z-index: 9999
+    height: 90px
+    width: 90px
+    background-image: url('/img/rocket.png')
+    background-size: cover
+    cursor: pointer
+    transition: opacity 0.2s ease-out
+    opacity: 0
+
+.show-rocket
+    opacity: 1!important
+    
+@media screen and (max-width: 599px)
+    .rocket
+        display: none
+@media screen and (min-width: 600px) and (max-width: 900px)
+    .rocket
+        top: 40%
+        right: -5px
+        height: 60px
+        width: 60px
+@media screen and (min-width: 901px) and (max-width: 1200px)
+    .rocket
+        top: 39.6%
+        right: 5px
+        height: 70px
+        width: 70px 
+//        
+//Header   
+//
+header
+    position: relative
+    height: 40vh
+    background-color: $mobile-background
+    overflow: hidden   
+    z-index: 3
+    -webkit-filter: sepia(0.3)
+
+@media screen and (min-width: 400px)
+    header
+        position: relative
+        height: 100vh
+        background-color: #17b1a5
+        background:
+            image: url(/img/bg-compressed.jpg)
+            size: cover
+            position: top center
+            attachment: fixed
+            repeat: no-repeat, repeat 
+        background-blend-mode: darken
+        overflow: hidden   
+        z-index: 3
+        -webkit-filter: sepia(0.3)
+
+.logo
+    //wysrodkowanie loga .svg 200x200px
+    //height: 200px
+    //width: 200px
+    height: 400px
+    width: 600px
+    background:
+        //image: url(/img/logo.svg)
+        image: url(/img/logo_pierwsze.svg)
+        position: center
+        repeat: no-repeat
+    position: absolute
+    top: 50%
+    left: 50%
+    margin-top: -200px
+    margin-left: -300px
+    opacity: 0 
+
+.scroll-down-ico
+    visibility: visible
+    height: 50px
+    width: 100%
+    color: white
+    bottom: 30px
+    position: absolute
+    text-align: center
+    i   
+        font-size: 55px
+        opacity: 0.5
+        text-rendering: auto
+        -webkit-font-smoothing: antialiased
+        cursor: pointer
+        animation: bounce 2.2s infinite
+        transition: all .5s
+        &:hover
+            opacity: 1
+
+    
+    
+
+
+    
+    
+//
+//Content
+//
+.content
+    position: relative
+    z-index: 2
+    background-image: url('/img/tlo.jpg')
+    //must be here - for cover footer*
+    margin-bottom: 544px
+    //make space for uncover footer
+    img
+        max-width: 100%
+    article
+        padding: 150px 0 300px
+        max-width: 800px
+        margin: 0 auto
+        text-align: center
+    
+@media screen and (max-width: 900px)
+    .content
+        margin-bottom: 600px
+    .icons
+        a:last-child
+            margin-top: 20px     
+    footer
+        .footer-form
+            max-width: 90%!important
+    h3.form
+        max-width: 80%
+        line-height: 22px
+        text-align: center
+        margin: 10px auto 30px
+    article
+        padding: 160px 0!important
+        max-width: 80%!important
+        margin: 0 auto
+        text-align: center
+
+        img
+            max-width: 100%
+     
+
+@media screen and (max-width: 550px)
+    .content
+        margin-bottom: 760px
+    .icons
+        a:nth-child(2)
+            margin-top: 20px
+//
+//Most mobile styles 
+//
+@media screen and (max-width: 400px)
+    .content
+        margin-bottom: 550px
+    p.text-right
+        margin: 8px 0 8px 0
+    footer
+        .footer-form
+            padding: 30px 0 10px 0!important
+        h3.form
+            line-height: 35px
+    article
+        h1
+            font-size: 45px
+//
+.wrap-text
+    width: 140px
+    height: auto
+    float: left
+    margin-right: 2rem
+    -webkit-shape-outside: circle()
+    -webkit-filter: brightness(200)
+    transition: all 1000s
+    cursor: pointer
+    &:hover
+        -webkit-filter: brightness(1)
+        transition: all .5s 
+        
+p.about
+    color: $dark-color
+    font-size: 1.9rem
+    text-align: left
+    margin-bottom: 155px    
+//    
+//Gallery
+//
+.gallery
+    margin-bottom: 180px
+    
+    .img-row
+        margin-bottom: 10px
+
+    figure
+       
+        margin-bottom: 30px
+        position: relative
+        opacity: 0
+        -webkit-transform: translateX(20px)
+        //Efekt po dodaniu klasy przez js
+        -webkit-transition: all .3s ease-in-out
+        overflow: hidden
+        cursor: pointer
+        -webkit-box-shadow: 10px 9px 11px -2px rgba(0,0,0,0.55)  
+    
+        &.is-showing
+            opacity: 1
+            transform: translateX(0px)
+        //Efekt po dodaniu klasy przez js
+
+        img
+            display: block
+            //Zeby figure nachodzilo
+            border-radius: 3px
+            transform: scale(1)
+            -webkit-transition: all .3s ease-in-out
+            
+
+        &:hover
+            figcaption
+                left: 0%
+            //fig na pozycje wyjściową
+            
+            img
+                transform: scale(1.2)
+                
+
+    figcaption
+        position: absolute
+        //zeby nachodzilo na img
+        bottom: 0
+        left: -100%
+        //przesuniecie figcaption zeby byl efekt wjazdu
+        background: $dark-color
+        opacity: 0.9
+        color: $emerald
+        padding: 2px 60px
+        font-size: 22px
+        font-weight: 600
+        border-radius: 0 5px 0 0
+        -webkit-transition: all 0.3s ease-in-out
+
+//        
+//Icons
+//
+.border-btn
+    display: inline-block
+    padding: 25px 40px
+    margin: 0 10px 0 10px
+    color: $dark-color
+    font-weight: bold
+    border: solid 3px #303030
+    border-radius: 4px
+    text-transform: uppercase
+    text-decoration: none
+    letter-spacing: 1px
+    transition: all .3s ease
+    .fa
+        margin-right: 8px
+    &:hover
+        color: $dark-color
+
+.icons
+    a
+        opacity: 0
+        -webkit-transform: translateX(100px)
+        -webkit-transition: all .5s ease-in-out
+        cursor: pointer
+        
+        
+        &.is-showing    
+            opacity: 1
+            -webkit-transform: translateX(0px)
+        
+
+
+
+//    
+//Footer
+//
+.not-valid
+    background: lighten(#E74C3C,4%)!important
+.emerald
+    color: $emerald
+    font-weight: 700
+    transition: all .3s ease
+    //cursor: pointer
+    &:hover
+        color: lighten($emerald, 10%)
+.main-link
+    text-decoration: none
+    
+h1.form
+    color: white
+    font-size: 4.8rem
+    text-align: center
+    margin: 6px
+    opacity: 1
+h3.form
+    color: white
+    font-size: 21px
+    text-align: center
+    line-height: 48px
+    font-weight: 200
+    margin-bottom: 30px
+textarea
+    min-height: 100px
+    //background-image: url('/img/tlo.jpg')
+    font-family: "proxima-nova", sans-serif
+    font-weight: bold
+    font-size: 20px
+    color: $dark-color    
+    border: 0px
+input[type="text"], input[type="email"]
+    height: 44px
+    margin-bottom: 20px
+    font-family: "proxima-nova", sans-serif
+    font-weight: bold
+    font-size: 20px
+    color: $dark-color
+    border: 0px
+.fb-icon
+    position: absolute
+    width: 50px
+    height: 52px
+    z-index: 100
+    left: 6%
+    bottom: -1px
+    margin-right: 0
+    background-image: url('/img/fb-ico.png')
+    background-size: cover
+    transition: all 1000s
+    cursor: pointer
+    &:hover
+        transform: rotate(90deg) translateY(-26px)
+        bottom: -8px
+        transition: all .5s ease-in
+.footer-top-line
+    bottom: -8px
+    left: 6%
+    position: absolute
+    width: 50px
+    height: 8px
+    background-color: darken($emerald, 7%)
+    opacity: 1
+footer
+    width: 100%
+    background: $dark_color  
+    padding: 0
+    position: fixed
+    bottom: 0
+    font-family: "proxima-nova",sans-serif
+    //fixed i bottom footer zawsze na dole
+    
+    .footer-box-line
+        height: 484px
+        width: 50px
+        bottom: 44px
+        left: 6%
+        position: fixed
+        border-bottom: 8px solid lighten($emerald, 7%)
+        border-top: 8px solid lighten($emerald, 7%)
+        opacity: 0.5
+        transition: all .3s ease
+        .box-core
+            width: 8px
+            height: 484px
+            background-color: lighten($emerald, 7%)
+            margin: 0 auto
+            
+    .footer-form
+        max-width: 800px
+        margin: 0 auto
+        padding: 50px 0 40px 0
+        
+    
+        .button-primary
+            background-color: transparent
+            border: 2px solid white
+            color: white
+            font-size: 18px
+            line-height: 30px
+            height: 52px
+            margin-top: 10px
+
+    .footer-bottom
+        background-color: darken($dark-color, 3%)
+        color: white
+        text-align: center
+        z-index: 3
+
+        
+@media screen and (min-width: 550px)
+    .footer-bottom
+        .text-left
+            float: left
+            margin: 10px 0 10px 65px
+        .text-right
+            float: right
+            margin: 10px 65px 10px 0      
+@media screen and (max-width: 1010px)
+    .footer-box-line, .footer-top-line
+        display: none
+@media screen and (max-width: 240px)
+    h1.form
+        font-size: 40px
+    h3.form
+        font-size: 18px
+        line-height: 19px
+        
+//        
+//Modals
+//
+#modal1, #modal2, #modal3, #modal4, #modal5, #modal6
+    background-image: url('/img/tlo.jpg')
+    
+.btn-close-modal
+    width: 100%
+    text-align: center
+    cursor: pointer
+    color: black
+.btn-close
+    margin-top: 0px
+    cursor: pointer
+    width: 100px
+    transition: all .3s 
+    &:hover
+        transform: rotate(90deg)  
+    
+.modal-content
+    max-width: 80%
+    margin: 0 auto   
+    text-align: center
+    color: white
+    a 
+        text-decoration: none
+        font-weight: 500
+    .color-pink
+        color: rgb(203, 13, 112)
+    .color-icecream
+        color: darken(#C3E4DF, 40%)
+    .fa
+        margin-right: 15px
+        color: $emerald  
+    .modal-row-top
+        margin-top: 20px
+    .site-name
+        margin: 15px 0 10px
+        h2
+            color: $dark-color
+    .site-tech
+        .fa-flask, .fa-share-alt, .fa-rocket
+            margin-right: 11px
+        font-family: 'Enriqueta', serif
+        background-color: #2c3e50
+        border-radius: 4px
+        -webkit-box-shadow: -2px 12px 21px 0px rgba(50, 50, 50, 0.75)
+        -moz-box-shadow:    -2px 12px 21px 0px rgba(50, 50, 50, 0.75)
+        box-shadow:         -2px 12px 21px 0px rgba(50, 50, 50, 0.75)
+        text-align: left
+        
+        h5
+            text-align: center
+        ul
+            margin-left: 15px
+            font-size: 1.2em
+            li
+                transition: all .4s ease
+                &:hover
+                    //cursor: pointer
+                    .fa
+                        color: lighten($emerald,15%)
+        
+            
+            
+    .site-screen
+        img
+            border-radius: 4px
+            width: 100%
+            -webkit-box-shadow: -2px 19px 30px 5px rgba(50, 50, 50, 0.75)
+            -moz-box-shadow:    -2px 19px 30px 5px rgba(50, 50, 50, 0.75)
+            box-shadow:         -2px 19px 30px 5px rgba(50, 50, 50, 0.75)
+       
+    
+    .site-desc
+        margin-top: 50px
+        .div-list
+            margin: 0 auto
+            max-width: 100%
+        .modal-desc
+            font-family: 'Enriqueta', serif
+            color: $dark-color
+            font-size: 1.5em
+        .modal-desc-list
+            font-family: 'Enriqueta', serif
+            color: $dark-color
+            font-size: 1.6em
+            //text-align: left
+            margin: 0 auto
+            .fa
+                color: black
+            li
+                //margin-left: 50px
+                line-height: 22px
+                
+.row-bottom
+    margin-top: 50px
+.s-row-bottom
+    margin-top: 20px    
+.border-btn-page
+    display: inline-block
+    padding: 10px 40px
+    margin: 0 10px 0 10px
+    color: white
+    background-color: $midnight-blue
+    font-weight: bold
+    border: solid 3px $midnight-blue
+    -webkit-box-shadow: -2px 10px 20px 2px rgba(50, 50, 50, 0.75)
+    -moz-box-shadow:    -2px 10px 20px 2px rgba(50, 50, 50, 0.75)
+    box-shadow:         -2px 10px 20px 2px rgba(50, 50, 50, 0.75)
+    border-radius: 4px
+    text-transform: uppercase
+    text-decoration: none
+    letter-spacing: 1px
+    transition: all .4s ease
+    &:hover
+        color: lighten($emerald, 12%)
+    
+
+@media screen and (min-width: 0px) and (max-width: 760px)
+    .modal-content
+        .site-tech
+            li:last-child
+                padding-bottom: 1rem
+        .modal-row-top
+            margin-top: 0
+        .three.columns
+            width: 100%
+            float: none
+        .nine.columns
+            width: 100%
+            float: none
+            margin-left: 0
+        .row-bottom
+            margin-top: 10px
+            
+@media screen and (max-height: 815px)
+    .row-bottom
+        margin-top: 10px
+    .site-screen
+@media screen and (min-width: 1600px) 
+    .site-screen
+        img
+            width: 83%!important
+            float: left
+
+        
+//Modal game dev
+.full
+    max-width: 100%
+.youtube-screen
+    display: none
+    img
+        cursor: pointer
+        opacity: 0.7
+        transition: all .3s ease-in-out
+        &:hover
+            opacity: 1
+.modal-content
+    .modal-gamedev
+
+        .game-title
+            font-size: 45px
+            font-weight: 600
+            span
+                font-weight: 500
+                font-size: 36px
+        nav
+            height: 80px
+            margin: 80px 0 0 0
+            .border-btn-dev
+                .fa
+                    margin-right: 8px
+                    color: $dark-color
+                    transition: all .4s ease-in-out
+                display: inline-block
+                width: 30%
+                padding: 20px 20px
+                //padding: 25px 40px
+                margin: 0 10px 0 10px
+                color: $dark-color
+                font-weight: bold
+                border: solid 3px #303030
+                border-radius: 4px
+                text-transform: uppercase
+                text-decoration: none
+                letter-spacing: 1px
+                transition: all .4s ease-in-out
+                &:hover
+                    background-color: $emerald
+                    border: dotted 3px white
+                    color: white
+                    .fa
+                        color: white
+        iframe
+            width: 640px
+            height: 360px
+@media screen and (max-width: 1360px)  
+    iframe
+        width: 560px!important
+        height: 315px!important
+    .game-title
+        font-size: 38px!important
+@media screen and (max-width: 1190px)  
+    iframe
+        width: 460px!important
+        height: 259px!important    
+@media screen and (min-width: 470px) and (max-width: 970px)  
+    #modal6
+        .modal-row-top
+            margin-top: 0
+        .game-title
+            margin-bottom: 5px
+        .btn-close
+            max-height: 80px!important
+        .columns
+            width: 100%
+            float: left
+            box-sizing: border-box
+            margin-left: 0
+        iframe
+            max-width: 560px!important
+            //height: 259px!important
+        nav
+            margin: 20px 0 0 0 
+            .border-btn-dev
+                padding: 10px 10px    
+@media screen and (min-width: 0px) and (max-width: 469px)  
+    #modal6
+        .modal-row-top
+            margin-top: 0
+        .game-title
+            margin-bottom: 0
+            font-size: 30px!important
+        .btn-close
+            max-height: 60px!important
+        .columns
+            width: 100%
+            float: left
+            box-sizing: border-box
+            margin-left: 0
+        iframe
+            display: none
+        .youtube-screen
+            display: block
+            img
+                width: 50%
+        nav
+            height: 100px
+            margin: 5px 0 0 0
+            .border-btn-dev
+                padding: 7px 7px  
+                width: 50%
+                margin: 5px 0 5px
+        .space-top   
+            margin-top: 30px
+
+
+// Formularz
+   Walidacja []
+   foto i jego hover []    
+
+    
+    
+//sass 711
+//html 430
+//js 309
+//php 17
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+        
